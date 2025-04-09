@@ -57,6 +57,9 @@ public class LightFlicker : MonoBehaviour
             
         flickeringLight.intensity = m_FlickerLightIntensity;
         m_FlickeringMaterial.SetColor (k_EmissionColorID, m_EmissionColor * m_FlickerLightIntensity * k_LightIntensityToEmission);
+
+
+        
     }
 
     void ChangeRandomFlickerLightIntensity ()

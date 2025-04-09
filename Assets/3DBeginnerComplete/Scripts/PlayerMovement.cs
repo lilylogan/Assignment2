@@ -26,14 +26,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate ()
     {
+        // reads the play's input
         var pos = MoveAction.ReadValue<Vector2>();
         
         float horizontal = pos.x;
         float vertical = pos.y;
-        
+        // sets movement vector
         m_Movement.Set(horizontal, 0f, vertical);
+        // then normalizes
         m_Movement.Normalize ();
 
+        // checks if the player is pressing any movement keys
         bool hasHorizontalInput = !Mathf.Approximately (horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
@@ -50,9 +53,17 @@ public class PlayerMovement : MonoBehaviour
         {
             m_AudioSource.Stop ();
         }
-
+        // rotes the player toward their movement direction
         Vector3 desiredForward = Vector3.RotateTowards (transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
-        m_Rotation = Quaternion.LookRotation (desiredForward);
+
+        // turns directional vector into a rotational ratio
+        Quaternion endRotation = Quaternion.LookRotation(desiredForward);
+
+        // Quaternion.Lerp(a, b, t) -> a: start unit value, b: end unit value, t: interpolation ratio
+        m_Rotation = Quaternion.Lerp(transform.rotation, endRotation, turnSpeed * Time.deltaTime);
+
+        // m_Rotation = Quaternion.LookRotation (desiredForward);
+
     }
 
     void OnAnimatorMove ()
