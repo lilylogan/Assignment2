@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     AudioSource m_AudioSource;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
+    private const float MIN_ANG_VEL_DEG = 10.0f;
+    private const float MAX_ANG_VEL_DEG = 1000.0f;
+
+    private float _alpha = 0.5f; // normalized to [0.0, 1.0] scale
 
     void Start ()
     {
@@ -54,15 +58,18 @@ public class PlayerMovement : MonoBehaviour
             m_AudioSource.Stop ();
         }
         // rotes the player toward their movement direction
-        Vector3 desiredForward = Vector3.RotateTowards (transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
+        // Vector3 desiredForward = Vector3.RotateTowards (transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
 
-        // turns directional vector into a rotational ratio
-        Quaternion endRotation = Quaternion.LookRotation(desiredForward);
+        // calculate the linear interpolation
+        float interpAngVelDeg = 
+            (1.0f - _alpha) * MIN_ANG_VEL_DEG +
+            _alpha * MAX_ANG_VEL_DEG;
 
-        // Quaternion.Lerp(a, b, t) -> a: start unit value, b: end unit value, t: interpolation ratio
-        m_Rotation = Quaternion.Lerp(transform.rotation, endRotation, turnSpeed * Time.deltaTime);
+        // get the point where you want to turn to 
+        Quaternion targetRotation = Quaternion.LookRotation(m_Movement);
 
-        // m_Rotation = Quaternion.LookRotation (desiredForward);
+        // apply the linear interplotaion in getting to that point!
+        m_Rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, interpAngVelDeg * Time.deltaTime);
 
     }
 
