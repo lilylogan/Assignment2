@@ -7,5 +7,11 @@ public class PlaySound : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GetComponent<AudioSource>().Play();
+
+        if (other.CompareTag("Head"))
+        {
+            Debug.Log("Triggered!");
+        }
+        
     }
 }
