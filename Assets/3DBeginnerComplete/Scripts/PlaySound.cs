@@ -11,6 +11,7 @@ public class PlaySound : MonoBehaviour
         if (other.CompareTag("Head"))
         {
             Debug.Log("Triggered!");
+            audioSource.Play();
         }
         
     }
