@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Head
+  - ShyArea
   layers:
   - Default
   - TransparentFX
