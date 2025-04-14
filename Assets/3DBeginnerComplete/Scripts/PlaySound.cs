@@ -4,8 +4,8 @@ public class PlaySound : MonoBehaviour
 {
     public AudioSource audioSource;
     
-    private void OggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        audioSource.Play();
+        GetComponent<AudioSource>().Play();
     }
 }
