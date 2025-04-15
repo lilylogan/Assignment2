@@ -15,11 +15,11 @@ Added functionality for the player to rotate smoothly. Can reference code in Scr
 
 ### New Particle Effect - Implemented by Inna Gruneva
 Added particle system at light objects. 
-Used an empty game object with a rigidbody and collider to trigger the particle system when player comes up to the light. 
+Used an empty game object with a rigidbody and collider to trigger the particle system when the player comes up to the light. 
 The empty game object holds a script called Firefly Particle Collision 2 that holds functionality. 
 
 
 
 ### New Sound Effect - Implemented by Nithi Deivanayagam
-Added laser sounds to the entrances to most of the rooms. Can reference code in Scripts/PlaySound.cs
+Added laser sounds to the entrances to most of the rooms. When the player walks into a room, they will hear a laser sound, but it's spread out, so the player won't know what rooms are going to make that sound. Can reference code in Scripts/PlaySound.cs
 
