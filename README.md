@@ -14,6 +14,9 @@ Added functionality for the player to rotate smoothly. Can reference code in Scr
 
 
 ### New Particle Effect - Implemented by Inna Gruneva
+Added particle system at light objects. 
+Used an empty game object with a rigidbody and collider to trigger the particle system when player comes up to the light. 
+The empty game object holds a script called Firefly Particle Collision 2 that holds functionality. 
 
 
 
