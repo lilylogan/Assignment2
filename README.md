@@ -4,10 +4,18 @@
 
 # Implementations
 
-dot product
+### Dot Product
 
-linear interpolation
+added by Simone Badaruddin
 
-new particle effect
+### Linear Interpolation
+Added functionality for player to rotate smoothly. Can reference code in Scripts/PlayerMovement.cs
+added by Lily Logan
 
-new sound effect
+### New Particle Effect
+
+added by Inna Gruneva
+
+### New Sound Effect
+
+added by Nithi Deivanayagam
