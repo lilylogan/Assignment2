@@ -4,19 +4,19 @@
 
 # Implementations
 
-### Dot Product
+### Dot Product - Implemented by Simone Badaruddin
 
-*implemented by Simone Badaruddin*
 
-### Linear Interpolation
-Added functionality for player to rotate smoothly. Can reference code in Scripts/PlayerMovement.cs
 
-*implemented by Lily Logan*
+### Linear Interpolation - Implemented by Lily Logan
+Added functionality for the player to rotate smoothly. Can reference code in Scripts/PlayerMovement.cs
 
-### New Particle Effect
 
-*implemented by Inna Gruneva*
 
-### New Sound Effect
+### New Particle Effect - Implemented by Inna Gruneva
+
+
+
+### New Sound Effect - Implemented by Nithi Deivanayagam
 Added laser sounds to the entrances to most of the rooms. When John Lemon walks into a room, the player will hear a laser room, but it's spread out, so the player won't know what rooms are going to make that sound. 
-*implemented by Nithi Deivanayagam*
+
