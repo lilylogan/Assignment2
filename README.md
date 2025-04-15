@@ -5,7 +5,9 @@
 # Implementations
 
 ### Dot Product - Implemented by Simone Badaruddin
-
+Implemented "emoji reaction" system for character. The character receives a shy emoji floating
+and bobbing above their head when in the bathroom, facing the showering ghost. This is 
+identified using dot product. 
 
 
 ### Linear Interpolation - Implemented by Lily Logan

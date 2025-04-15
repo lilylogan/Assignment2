@@ -3952,7 +3952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0435d5e0760b4331aab54c9169c9b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shyEmojiPrefab: {fileID: 3395121045792315341, guid: 27d56ca404fca462b9b75797d6f4a621,
+  shyEmojiPrefab: {fileID: 2107409826236812522, guid: 5e699419009e247d09447debd74bf64e,
     type: 3}
   player: {fileID: 2008973354732098957}
   showerTarget: {fileID: 154588211}
