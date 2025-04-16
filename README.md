@@ -5,7 +5,7 @@
 # Implementations
 
 ### Dot Product - Implemented by Simone Badaruddin
-Implemented "emoji reaction" system for character. The character receives a shy emoji floating and bobbing above their head when in the bathroom, facing the showering ghost. This is identified using dot product. See EmojiReactor.c and updates to Observer.c. 
+Implemented Emoji Reaction system for character (he has a lot of emoitons)! The character receives a shy emoji floating animatedly above their head when in the bathroom, facing the ghost in the shower. The character similarly receives a scared emoji when close to and facing an enemy. The character facing each trigger is calculated using dot product. Modified files include EmojiReactor.cs, ScaryRmojiHandler.cs and updates to Observer.cs.
 
 
 ### Linear Interpolation - Implemented by Lily Logan
