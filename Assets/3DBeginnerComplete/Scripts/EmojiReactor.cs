@@ -42,7 +42,7 @@ public class EmojiReactor : MonoBehaviour
 {
     Vector3 originalScale = emoji.transform.localScale;
     float timer = 0f;
-    float duration = 4f; // how long the emoji lasts
+    float duration = 2f; // how long the emoji lasts
 
     while (timer < duration)
     {
